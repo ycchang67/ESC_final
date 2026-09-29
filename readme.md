@@ -1,5 +1,7 @@
 
 # ESC final project - Moomentcatcher: 樹莓派雲台相機系統 (Pan-Tilt Camera System)
+![成品圖](./readme_images/p1.jpg)
+Slide: https://canva.link/fwrqwje1162h372
 
 這個專案使用 Raspberry Pi 搭配 PCA9685 伺服馬達驅動板與 Picamera2 模組，結合 OpenCV 實現了「全景人臉捕捉」與「即時人臉追蹤」雙模式的雲台相機系統。
 
