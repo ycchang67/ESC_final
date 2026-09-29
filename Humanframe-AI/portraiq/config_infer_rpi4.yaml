@@ -1,0 +1,15 @@
+model:
+  backbone: efficientnet_b4
+  pretrained: false
+  checkpoint: null
+  backbone_lr_scale: 0.1
+
+data:
+  image_size: 224
+
+gpu:
+  device: cpu
+
+inference:
+  cpu_threads: 4
+  cpu_optimized: true

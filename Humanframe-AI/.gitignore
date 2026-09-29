@@ -1,0 +1,46 @@
+# Python cache and bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Tooling / editors
+.vscode/
+.idea/
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+miniconda.sh
+
+# Runtime outputs
+portraiq/results/
+portraiq/photos/
+portraiq/logs/
+portraiq/runs/
+portraiq/tb_logs/
+logs/*
+!logs/.gitkeep
+
+# Local Hugging Face upload workdirs (nested repos)
+hf_model_upload/
+hf_model_upload_lite/
+
+# Model artifacts
+*.pth
+*.pt
+*.onnx
+
+# Dataset artifacts (keep directory placeholders only)
+portraiq/data/raw/**/*
+!portraiq/data/raw/**/.gitkeep
+portraiq/data/processed/**/*
+!portraiq/data/processed/**/.gitkeep
+portraiq/data/annotations/*
+!portraiq/data/annotations/.gitkeep
+portraiq/data/splits/*
+!portraiq/data/splits/.gitkeep

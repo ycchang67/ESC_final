@@ -1,0 +1,43 @@
+model:
+  backbone: efficientnet_b4
+  pretrained: true
+  checkpoint: null
+  backbone_lr_scale: 0.1
+
+training:
+  seed: 42
+  epochs: 50
+  freeze_epochs: 7
+  batch_size: 16
+  gradient_accumulation_steps: 8
+  learning_rate: 0.0001
+  weight_decay: 0.00001
+  lr_scheduler: cosine
+  lr_min: 1.0e-6
+  mixed_precision: true
+  multi_gpu: false
+  num_gpus: 1
+  early_stopping_patience: 7
+  loss: smooth_l1
+  variance_penalty: 0.1
+  checkpoint_dir: models
+  best_checkpoint_name: best_lite.pth
+  last_checkpoint_name: last_lite.pth
+
+data:
+  image_size: 224
+  train_split: 0.8
+  val_split: 0.1
+  test_split: 0.1
+  score_std_max: 1.5
+  label_smoothing_alpha: 0.1
+  weighted_sampling: true
+  num_workers: 8
+
+gpu:
+  device: cuda
+  cudnn_benchmark: true
+  visible_devices: "0"
+
+inference:
+  cpu_threads: 4
